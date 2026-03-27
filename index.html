@@ -12,9 +12,19 @@
         <div class="score-board">
             <div class="score">得分：<span id="score">0</span></div>
             <div class="moves">步数：<span id="moves">0</span></div>
+            <div class="level">关卡：<span id="level">1</span></div>
         </div>
+        <div class="target-score">目标分数：<span id="targetScore">1000</span></div>
         <div class="game-board" id="gameBoard"></div>
-        <button class="restart-btn" onclick="initGame()">重新开始</button>
+        <div class="button-group">
+            <button class="action-btn hint-btn" onclick="showHint()">💡 提示</button>
+            <button class="restart-btn" onclick="initGame()">重新开始</button>
+        </div>
+        <div class="level-complete" id="levelComplete" style="display: none;">
+            <h2>🎉 关卡完成!</h2>
+            <p>得分：<span id="finalScore">0</span></p>
+            <button class="next-level-btn" onclick="nextLevel()">下一关</button>
+        </div>
     </div>
     <script src="game.js"></script>
 </body>
